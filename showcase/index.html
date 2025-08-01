@@ -49,7 +49,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         /* Typography Styles */
         .text-display {
             font-size: 3.75rem;
@@ -90,477 +89,15 @@
             gap: 2rem;
         }
 
-        .grid-3 {
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }        /* Color Swatches */
-        .color-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2rem;
+        /* Glowing Text */
+        .glow-text {
+            text-shadow: 0 0 20px var(--color-accent-purple-400);
+            animation: glow 2s ease-in-out infinite alternate;
         }
 
-        .color-group h3 {
-            font-size: 1.25rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-            color: var(--color-text-secondary);
-        }
-
-        .color-swatch {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.75rem;
-        }
-
-        .color-box {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 0.5rem;
-            margin-right: 1rem;
-            border: 1px solid var(--color-utility-border);
-        }
-
-        .color-info {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .color-name {
-            font-weight: 400;
-            font-size: 0.875rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .color-value {
-            font-size: 0.75rem;
-            color: var(--color-text-muted);
-            font-family: SF Mono, Monaco, monospace;
-        }
-
-        /* Button Styles */
-        .button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 400;
-            font-size: 0.875rem;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            margin-right: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .button-primary {
-            background-color: var(--color-accent-purple-600);
-            color: var(--color-text-primary);
-        }
-
-        .button-primary:hover {
-            background-color: var(--color-accent-purple-400);
-        }
-
-        .button-secondary {
-            background-color: var(--color-surface-elevated);
-            color: var(--color-text-primary);
-            border: 1px solid var(--color-utility-border-elevated);
-        }
-
-        .button-secondary:hover {
-            background-color: var(--color-state-hover);
-        }
-
-        .button-outline {
-            background-color: transparent;
-            color: var(--color-text-primary);
-            border: 1px solid var(--color-utility-border-elevated);
-        }
-
-        .button-outline:hover {
-            background-color: var(--color-state-hover);
-        }
-
-        /* Card Styles */
-        .card {
-            background-color: var(--color-surface-elevated);
-            border: 1px solid var(--color-utility-border);
-            border-radius: 0.75rem;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .card-elevated {
-            background-color: var(--color-surface-elevated);
-            border: 1px solid var(--color-utility-border-elevated);
-            border-radius: 0.75rem;
-            padding: 2rem;
-            box-shadow: 0 8px 24px var(--color-utility-shadow);
-        }
-
-        .card h3 {
-            font-size: 1.25rem;
-            font-weight: 300;
-            margin-bottom: 0.75rem;
-        }
-
-        .card p {
-            color: var(--color-text-secondary);
-            font-weight: 300;
-        }
-
-        /* Enhanced Button Styles */
-        .mc-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-family: system-ui, -apple-system, sans-serif;
-            font-weight: 400;
-            font-size: 0.875rem;
-            line-height: 1.2;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-            text-decoration: none;
-            user-select: none;
-            margin-right: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .mc-button-primary {
-            background-color: var(--color-accent-purple-600);
-            color: var(--color-text-primary);
-        }
-
-        .mc-button-primary:hover {
-            background-color: var(--color-accent-purple-400);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(82, 0, 204, 0.3);
-        }
-
-        .mc-button-secondary {
-            background-color: var(--color-surface-elevated);
-            color: var(--color-text-primary);
-            border: 1px solid var(--color-utility-border-elevated);
-        }
-
-        .mc-button-secondary:hover {
-            background-color: var(--color-state-hover);
-            border-color: var(--color-primary-blue-400);
-            transform: translateY(-1px);
-        }
-
-        .mc-button-outline {
-            background-color: transparent;
-            color: var(--color-text-primary);
-            border: 1px solid var(--color-utility-border-elevated);
-        }
-
-        .mc-button-outline:hover {
-            background-color: var(--color-state-hover);
-            border-color: var(--color-primary-blue-400);
-        }
-
-        .mc-button-ghost {
-            background-color: transparent;
-            color: var(--color-text-secondary);
-            border: none;
-            padding: 0.5rem 1rem;
-        }
-
-        .mc-button-ghost:hover {
-            background-color: var(--color-state-hover);
-            color: var(--color-text-primary);
-        }
-
-        /* Form Styles */
-        .mc-input {
-            display: block;
-            width: 100%;
-            padding: 0.75rem 1rem;
-            background-color: var(--color-surface-elevated);
-            border: 1px solid var(--color-utility-border);
-            border-radius: 0.5rem;
-            color: var(--color-text-primary);
-            font-family: system-ui, -apple-system, sans-serif;
-            font-weight: 300;
-            font-size: 0.875rem;
-            margin-bottom: 1rem;
-            transition: all 0.2s ease;
-        }
-
-        .mc-input::placeholder {
-            color: var(--color-text-muted);
-        }
-
-        .mc-input:focus {
-            outline: none;
-            border-color: var(--color-primary-blue-400);
-            box-shadow: 0 0 0 3px rgba(51, 133, 255, 0.1);
-        }
-
-        .mc-toggle {
-            position: relative;
-            display: inline-block;
-            width: 3rem;
-            height: 1.5rem;
-            margin-right: 1rem;
-        }
-
-        .mc-toggle input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .mc-toggle-slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: var(--color-state-disabled);
-            transition: 0.2s;
-            border-radius: 1.5rem;
-        }
-
-        .mc-toggle-slider:before {
-            position: absolute;
-            content: "";
-            height: 1.125rem;
-            width: 1.125rem;
-            left: 0.1875rem;
-            bottom: 0.1875rem;
-            background-color: white;
-            transition: 0.2s;
-            border-radius: 50%;
-        }
-
-        .mc-toggle input:checked + .mc-toggle-slider {
-            background-color: var(--color-accent-purple-600);
-        }
-
-        .mc-toggle input:checked + .mc-toggle-slider:before {
-            transform: translateX(1.5rem);
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Header -->
-        <header class="section">
-            <h1 class="text-display">MC Design System</h1>
-            <p class="text-body">A professional dark design system with blue and purple accents</p>
-        </header>
-
-        <!-- Colors Section with Interactive Grid -->
-        <section class="section">
-            <h2 class="text-heading">Colors</h2>
-            
-            <div class="interactive-grid">
-                <!-- Primary Blues -->
-                <div class="grid-item shimmer">
-                    <h3 style="color: #3385ff; margin-bottom: 1rem;">Primary Blues</h3>
-                    <div class="color-swatch" style="margin-bottom: 0.75rem;">
-                        <div class="color-box" style="background-color: #3385ff; width: 2rem; height: 2rem; border-radius: 0.25rem; margin-right: 0.75rem;"></div>
-                        <div class="color-info">
-                            <span class="color-name" style="font-weight: 400;">Blue 400</span>
-                            <span class="color-value" style="font-size: 0.75rem; color: var(--color-text-muted);">#3385ff</span>
-                        </div>
-                    </div>
-                    <div class="color-swatch">
-                        <div class="color-box" style="background-color: #0052cc; width: 2rem; height: 2rem; border-radius: 0.25rem; margin-right: 0.75rem;"></div>
-                        <div class="color-info">
-                            <span class="color-name" style="font-weight: 400;">Blue 600</span>
-                            <span class="color-value" style="font-size: 0.75rem; color: var(--color-text-muted);">#0052cc</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Accent Purples -->
-                <div class="grid-item shimmer">
-                    <h3 style="color: #8533ff; margin-bottom: 1rem;">Accent Purples</h3>
-                    <div class="color-swatch" style="margin-bottom: 0.75rem;">
-                        <div class="color-box" style="background-color: #8533ff; width: 2rem; height: 2rem; border-radius: 0.25rem; margin-right: 0.75rem;"></div>
-                        <div class="color-info">
-                            <span class="color-name" style="font-weight: 400;">Purple 400</span>
-                            <span class="color-value" style="font-size: 0.75rem; color: var(--color-text-muted);">#8533ff</span>
-                        </div>
-                    </div>
-                    <div class="color-swatch">
-                        <div class="color-box" style="background-color: #5200cc; width: 2rem; height: 2rem; border-radius: 0.25rem; margin-right: 0.75rem;"></div>
-                        <div class="color-info">
-                            <span class="color-name" style="font-weight: 400;">Purple 600</span>
-                            <span class="color-value" style="font-size: 0.75rem; color: var(--color-text-muted);">#5200cc</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Surface Colors -->
-                <div class="grid-item shimmer">
-                    <h3 style="color: var(--color-text-secondary); margin-bottom: 1rem;">Surface Colors</h3>
-                    <div class="color-swatch" style="margin-bottom: 0.75rem;">
-                        <div class="color-box" style="background-color: #0a0a0a; border: 1px solid #333; width: 2rem; height: 2rem; border-radius: 0.25rem; margin-right: 0.75rem;"></div>
-                        <div class="color-info">
-                            <span class="color-name" style="font-weight: 400;">Background</span>
-                            <span class="color-value" style="font-size: 0.75rem; color: var(--color-text-muted);">#0a0a0a</span>
-                        </div>
-                    </div>
-                    <div class="color-swatch">
-                        <div class="color-box" style="background-color: #141414; width: 2rem; height: 2rem; border-radius: 0.25rem; margin-right: 0.75rem;"></div>
-                        <div class="color-info">
-                            <span class="color-name" style="font-weight: 400;">Surface</span>
-                            <span class="color-value" style="font-size: 0.75rem; color: var(--color-text-muted);">#141414</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Typography Section -->
-        <section class="section">
-            <h2 class="text-heading">Typography</h2>
-            
-            <div style="margin-bottom: 3rem;">
-                <h1 class="text-display">Thin Display Text</h1>
-                <p class="text-body">6xl / Thin (100)</p>
-            </div>
-            
-            <div style="margin-bottom: 2rem;">
-                <h2 class="text-heading">Extra Light Heading</h2>
-                <p class="text-body">4xl / Extra Light (200)</p>
-            </div>
-            
-            <div style="margin-bottom: 2rem;">
-                <h3 class="text-title">Light Title</h3>
-                <p class="text-body">2xl / Light (300)</p>
-            </div>
-            
-            <div style="margin-bottom: 2rem;">
-                <p class="text-body">Body text in light weight for readability</p>
-                <p class="text-body">lg / Light (300)</p>
-            </div>
-        </section>
-
-        <!-- Components Section with Glass Cards -->
-        <section class="section">
-            <h2 class="text-heading">Components</h2>
-            
-            <!-- Buttons Showcase -->
-            <div class="glass-card" style="margin-bottom: 3rem;">
-                <h3 class="text-title" style="margin-bottom: 2rem;">Interactive Buttons</h3>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                    <button class="mc-button mc-button-primary">Primary Action</button>
-                    <button class="mc-button mc-button-secondary">Secondary</button>
-                    <button class="mc-button mc-button-outline">Outline Style</button>
-                    <button class="mc-button mc-button-ghost">Ghost Button</button>
-                </div>
-                <p class="text-body">Hover effects include subtle lift animations and purple glow shadows for premium feel</p>
-            </div>
-
-            <!-- Form Elements Showcase -->
-            <div class="glass-card" style="margin-bottom: 3rem;">
-                <h3 class="text-title" style="margin-bottom: 2rem;">Form Elements</h3>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
-                    <div>
-                        <input type="text" class="mc-input" placeholder="Your name" value="Matt Carpenter">
-                        <input type="email" class="mc-input" placeholder="Email address" value="matt@example.com">
-                        <input type="password" class="mc-input" placeholder="Password">
-                    </div>
-                    <div>
-                        <h4 style="font-size: 1rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text-secondary);">Toggle Switches</h4>
-                        <div style="display: flex; flex-direction: column; gap: 1rem;">
-                            <div style="display: flex; align-items: center; gap: 0.75rem;">
-                                <label class="mc-toggle">
-                                    <input type="checkbox">
-                                    <span class="mc-toggle-slider"></span>
-                                </label>
-                                <span style="color: var(--color-text-secondary); font-size: 0.875rem;">Enable notifications</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 0.75rem;">
-                                <label class="mc-toggle">
-                                    <input type="checkbox" checked>
-                                    <span class="mc-toggle-slider"></span>
-                                </label>
-                                <span style="color: var(--color-text-secondary); font-size: 0.875rem;">Dark mode</span>
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 0.75rem;">
-                                <label class="mc-toggle">
-                                    <input type="checkbox">
-                                    <span class="mc-toggle-slider"></span>
-                                </label>
-                                <span style="color: var(--color-text-secondary); font-size: 0.875rem;">Auto-save</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Cards Showcase -->
-            <div style="margin-bottom: 3rem;">
-                <h3 class="text-title" style="margin-bottom: 2rem;">Card Variants</h3>
-                <div class="interactive-grid">
-                    <div class="card shimmer">
-                        <h3>Standard Card</h3>
-                        <p>Subtle borders and surface coloring for content organization.</p>
-                    </div>
-                    <div class="card-elevated shimmer">
-                        <h3>Elevated Card</h3>
-                        <p>Enhanced shadows and borders for visual hierarchy.</p>
-                    </div>
-                    <div class="glass-card">
-                        <h3>Glass Morphism</h3>
-                        <p>Modern frosted glass effect with backdrop blur.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Design Principles -->
-        <section class="section">
-            <h2 class="text-heading">Design Principles</h2>
-            <div class="card">
-                <h3>Core Guidelines</h3>
-                <ul style="color: var(--color-text-secondary); font-weight: 300; line-height: 1.75;">
-                    <li><strong>No Linear Gradients:</strong> Clean, solid colors throughout</li>
-                    <li><strong>Typography:</strong> Thin, light font weights (100-300) for elegance</li>
-                    <li><strong>Colors:</strong> Dark theme with blue and purple accents</li>
-                    <li><strong>Professional:</strong> Clean, modern, minimalist aesthetic</li>
-                    <li><strong>Consistency:</strong> Single source of truth for all design decisions</li>
-                </ul>
-            </div>
-        </section>
-    </div>
-</body>
-</html>        /* Gradient Animations - Strategic accent use only */
-        .gradient-border {
-            position: relative;
-            background: var(--color-surface-elevated);
-            border-radius: 0.75rem;
-            padding: 2rem;
-            overflow: hidden;
-        }
-
-        .gradient-border::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            padding: 1px;
-            background: linear-gradient(45deg, var(--color-primary-blue-400), var(--color-accent-purple-400), var(--color-primary-blue-400));
-            border-radius: inherit;
-            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            mask-composite: exclude;
-            animation: gradientRotate 3s linear infinite;
-        }
-
-        @keyframes gradientRotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px var(--color-accent-purple-400); }
+            to { text-shadow: 0 0 30px var(--color-accent-purple-400), 0 0 40px var(--color-accent-purple-400); }
         }
 
         /* Floating Elements */
@@ -604,123 +141,58 @@
             66% { transform: translateY(10px) rotate(240deg); }
         }
 
-        /* Glass Morphism Cards */
-        .glass-card {
-            background: rgba(20, 20, 20, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            padding: 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .glass-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-        }
-
-        /* Pulse Animation for Buttons */
-        .mc-button-primary {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .mc-button-primary::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-            transform: translate(-50%, -50%);
-            transition: width 0.6s, height 0.6s;
-        }
-
-        .mc-button-primary:active::after {
-            width: 300px;
-            height: 300px;
-        }
-
-        /* Shimmer Effect for Cards */
-        .shimmer {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .shimmer::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        /* Glowing Text */
-        .glow-text {
-            text-shadow: 0 0 20px var(--color-accent-purple-400);
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { text-shadow: 0 0 20px var(--color-accent-purple-400); }
-            to { text-shadow: 0 0 30px var(--color-accent-purple-400), 0 0 40px var(--color-accent-purple-400); }
-        }
-
-        /* Interactive Grid */
-        .interactive-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
-        }
-
-        .grid-item {
-            background: var(--color-surface-elevated);
-            border: 1px solid var(--color-utility-border);
+        /* Enhanced Button Styles */
+        .mc-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
-            padding: 1.5rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-family: system-ui, -apple-system, sans-serif;
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 1.2;
+            border: none;
             cursor: pointer;
-            position: relative;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            user-select: none;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
         }
 
-        .grid-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(133, 51, 255, 0.2);
-            border-color: var(--color-accent-purple-400);
+        .mc-button-primary {
+            background-color: var(--color-accent-purple-600);
+            color: var(--color-text-primary);
         }
 
-        .grid-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--color-primary-blue-400), var(--color-accent-purple-400));
-            border-radius: 0.5rem 0.5rem 0 0;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
+        .mc-button-primary:hover {
+            background-color: var(--color-accent-purple-400);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(133, 51, 255, 0.4);
         }
 
-        .grid-item:hover::before {
-            transform: scaleX(1);
+        .mc-button-secondary {
+            background-color: var(--color-surface-elevated);
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-utility-border-elevated);
+        }
+
+        .mc-button-secondary:hover {
+            background-color: var(--color-state-hover);
+            border-color: var(--color-primary-blue-400);
+            transform: translateY(-1px);
+        }
+
+        .mc-button-outline {
+            background-color: transparent;
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-utility-border-elevated);
+        }
+
+        .mc-button-outline:hover {
+            background-color: var(--color-state-hover);
+            border-color: var(--color-primary-blue-400);
         }
     </style>
 </head>
@@ -737,16 +209,124 @@
             <p class="text-body">A professional dark design system with blue and purple accents</p>
         </header>
 
-        <!-- Hero Demo Section -->
+        <!-- Colors Section -->
         <section class="section">
-            <div class="gradient-border">
-                <h2 class="text-heading" style="margin-bottom: 1rem;">Live Component Showcase</h2>
-                <p class="text-body" style="margin-bottom: 2rem;">Interactive examples of every design token and component in action</p>
-                
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                    <button class="mc-button mc-button-primary">Get Started</button>
-                    <button class="mc-button mc-button-secondary">Learn More</button>
-                    <button class="mc-button mc-button-outline">Documentation</button>
+            <h2 class="text-heading">Colors</h2>
+            
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <!-- Primary Blues -->
+                <div style="background: var(--color-surface-elevated); padding: 2rem; border-radius: 0.75rem; border: 1px solid var(--color-utility-border);">
+                    <h3 style="color: #3385ff; margin-bottom: 1.5rem; font-weight: 300;">Primary Blues</h3>
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background-color: #3385ff; border-radius: 0.5rem; margin-right: 1rem;"></div>
+                        <div>
+                            <div style="font-weight: 400; font-size: 0.875rem; margin-bottom: 0.25rem;">Blue 400</div>
+                            <div style="font-size: 0.75rem; color: var(--color-text-muted); font-family: SF Mono, Monaco, monospace;">#3385ff</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 3rem; height: 3rem; background-color: #0052cc; border-radius: 0.5rem; margin-right: 1rem;"></div>
+                        <div>
+                            <div style="font-weight: 400; font-size: 0.875rem; margin-bottom: 0.25rem;">Blue 600</div>
+                            <div style="font-size: 0.75rem; color: var(--color-text-muted); font-family: SF Mono, Monaco, monospace;">#0052cc</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accent Purples -->
+                <div style="background: var(--color-surface-elevated); padding: 2rem; border-radius: 0.75rem; border: 1px solid var(--color-utility-border);">
+                    <h3 style="color: #8533ff; margin-bottom: 1.5rem; font-weight: 300;">Accent Purples</h3>
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background-color: #8533ff; border-radius: 0.5rem; margin-right: 1rem;"></div>
+                        <div>
+                            <div style="font-weight: 400; font-size: 0.875rem; margin-bottom: 0.25rem;">Purple 400</div>
+                            <div style="font-size: 0.75rem; color: var(--color-text-muted); font-family: SF Mono, Monaco, monospace;">#8533ff</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 3rem; height: 3rem; background-color: #5200cc; border-radius: 0.5rem; margin-right: 1rem;"></div>
+                        <div>
+                            <div style="font-weight: 400; font-size: 0.875rem; margin-bottom: 0.25rem;">Purple 600</div>
+                            <div style="font-size: 0.75rem; color: var(--color-text-muted); font-family: SF Mono, Monaco, monospace;">#5200cc</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surface Colors -->
+                <div style="background: var(--color-surface-elevated); padding: 2rem; border-radius: 0.75rem; border: 1px solid var(--color-utility-border);">
+                    <h3 style="color: var(--color-text-secondary); margin-bottom: 1.5rem; font-weight: 300;">Surface Colors</h3>
+                    <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background-color: #0a0a0a; border: 1px solid #333; border-radius: 0.5rem; margin-right: 1rem;"></div>
+                        <div>
+                            <div style="font-weight: 400; font-size: 0.875rem; margin-bottom: 0.25rem;">Background</div>
+                            <div style="font-size: 0.75rem; color: var(--color-text-muted); font-family: SF Mono, Monaco, monospace;">#0a0a0a</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center;">
+                        <div style="width: 3rem; height: 3rem; background-color: #141414; border-radius: 0.5rem; margin-right: 1rem;"></div>
+                        <div>
+                            <div style="font-weight: 400; font-size: 0.875rem; margin-bottom: 0.25rem;">Surface</div>
+                            <div style="font-size: 0.75rem; color: var(--color-text-muted); font-family: SF Mono, Monaco, monospace;">#141414</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <!-- Typography Section -->
+        <section class="section">
+            <h2 class="text-heading">Typography</h2>
+            
+            <div style="margin-bottom: 3rem;">
+                <h1 class="text-display">Thin Display Text</h1>
+                <p class="text-body">6xl / Thin (100)</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <h2 class="text-heading">Extra Light Heading</h2>
+                <p class="text-body">4xl / Extra Light (200)</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <h3 class="text-title">Light Title</h3>
+                <p class="text-body">2xl / Light (300)</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <p class="text-body">Body text in light weight for readability</p>
+                <p class="text-body">lg / Light (300)</p>
+            </div>
+        </section>
+
+        <!-- Components Section -->
+        <section class="section">
+            <h2 class="text-heading">Components</h2>
+            
+            <!-- Buttons -->
+            <div style="margin-bottom: 3rem;">
+                <h3 class="text-title">Buttons</h3>
+                <div>
+                    <button class="mc-button mc-button-primary">Primary Button</button>
+                    <button class="mc-button mc-button-secondary">Secondary Button</button>
+                    <button class="mc-button mc-button-outline">Outline Button</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Principles -->
+        <section class="section">
+            <h2 class="text-heading">Design Principles</h2>
+            <div style="background-color: var(--color-surface-elevated); border: 1px solid var(--color-utility-border); border-radius: 0.75rem; padding: 2rem;">
+                <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 0.75rem;">Core Guidelines</h3>
+                <ul style="color: var(--color-text-secondary); font-weight: 300; line-height: 1.75;">
+                    <li><strong>No Linear Gradients:</strong> Clean, solid colors throughout</li>
+                    <li><strong>Typography:</strong> Thin, light font weights (100-300) for elegance</li>
+                    <li><strong>Colors:</strong> Dark theme with blue and purple accents</li>
+                    <li><strong>Professional:</strong> Clean, modern, minimalist aesthetic</li>
+                    <li><strong>Consistency:</strong> Single source of truth for all design decisions</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
