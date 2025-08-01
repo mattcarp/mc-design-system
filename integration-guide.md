@@ -1,34 +1,31 @@
 # MAC Design System - Integration Guide
 
-## 🚀 Quick Start (2 Minutes to Beauty)
+## Quick Start (2 Minutes to Beauty)
 
 ### For New Projects
-```bash
-npm install @mac-design-system/core
-# or
-yarn add @mac-design-system/core
-```
+Copy the CSS custom properties from `showcase/index.html` or extract the design tokens you need.
 
 ### CSS Integration
 ```css
-/* Import the complete system */
-@import '@mac-design-system/core/dist/mac.css';
-
-/* Or import just what you need */
-@import '@mac-design-system/tokens/colors.css';
-@import '@mac-design-system/components/buttons.css';
-```
-
-### Tailwind Integration
-```js
-// tailwind.config.js
-module.exports = {
-  presets: [require('@mac-design-system/tailwind-preset')],
-  // Your custom config
+/* Copy these design tokens into your project */
+:root {
+  --color-primary-blue-400: #3385ff;
+  --color-primary-blue-600: #0052cc;
+  --color-accent-purple-400: #8533ff;
+  --color-accent-purple-600: #5200cc;
+  --color-surface-background: #0a0a0a;
+  --color-surface-elevated: #141414;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #b3b3b3;
+  --color-text-muted: #666666;
+  /* ... etc */
 }
 ```
 
-## 🎨 Design Tokens Available
+### Component Classes
+Copy the component CSS classes from the showcase file, or use them as inspiration for your own implementations.
+
+## Design Tokens Available
 
 ### Colors
 - Primary Blues: `--mac-blue-400`, `--mac-blue-600`
@@ -47,18 +44,17 @@ module.exports = {
 - Cards: `.mac-card`, `.mac-card-elevated`, `.mac-card-glass`
 - Forms: `.mac-input`, `.mac-textarea`, `.mac-toggle`
 
-## ⚡ Framework Integrations
+## Framework Integrations
 
 ### React
 ```jsx
-import { Button, Card, Input } from '@mac-design-system/react'
-
+// Copy the CSS classes and use them directly
 function App() {
   return (
-    <Card variant="elevated">
-      <Input placeholder="Beautiful by default" />
-      <Button variant="primary">Start Building</Button>
-    </Card>
+    <div className="mac-card mac-card-elevated">
+      <input className="mac-input" placeholder="Beautiful by default" />
+      <button className="mc-button mc-button-primary">Start Building</button>
+    </div>
   )
 }
 ```
@@ -66,10 +62,10 @@ function App() {
 ### Vue
 ```vue
 <template>
-  <MacCard variant="glass">
-    <MacInput placeholder="Élégant toujours" />
-    <MacButton variant="primary">Commencer</MacButton>
-  </MacCard>
+  <div class="mac-card mac-card-glass">
+    <input class="mac-input" placeholder="Élégant toujours" />
+    <button class="mc-button mc-button-primary">Commencer</button>
+  </div>
 </template>
 ```
 
@@ -81,7 +77,7 @@ function App() {
 </div>
 ```
 
-## 🔧 Customization
+## Customization
 
 ### Brand Colors Override
 ```css
