@@ -206,7 +206,7 @@
         <!-- Header with Glow Effect -->
         <header class="section">
             <h1 class="text-display glow-text">MAC Design System</h1>
-            <p class="text-body">A professional dark design system by Matthew Adam Carpenter</p>
+            <p class="text-body">Matt's ridiculously over-engineered solution to making buttons look pretty</p>
         </header>
 
         <!-- Colors Section -->
@@ -317,13 +317,13 @@
         <section class="section">
             <h2 class="text-heading">Design Principles</h2>
             <div style="background-color: var(--color-surface-elevated); border: 1px solid var(--color-utility-border); border-radius: 0.75rem; padding: 2rem;">
-                <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 0.75rem;">Core Guidelines</h3>
+                <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 0.75rem;">Core Guidelines (AKA Matt's Design Neuroses)</h3>
                 <ul style="color: var(--color-text-secondary); font-weight: 300; line-height: 1.75;">
-                    <li><strong>No Linear Gradients:</strong> Clean, solid colors throughout</li>
-                    <li><strong>Typography:</strong> Thin, light font weights (100-300) for elegance</li>
-                    <li><strong>Colors:</strong> Dark theme with blue and purple accents</li>
-                    <li><strong>Professional:</strong> Clean, modern, minimalist aesthetic</li>
-                    <li><strong>Consistency:</strong> Single source of truth for all design decisions</li>
+                    <li><strong>No Linear Gradients:</strong> Because Matt thinks they're tacky and this is his system</li>
+                    <li><strong>Typography:</strong> Obsessively thin font weights (100-300) because elegance > readability, apparently</li>
+                    <li><strong>Colors:</strong> Dark theme with blue and purple accents (Matt's favorite colors, shocking)</li>
+                    <li><strong>Professional:</strong> Clean, modern, minimalist aesthetic (translation: Matt removed all the fun parts)</li>
+                    <li><strong>Consistency:</strong> Single source of truth for all design decisions (because Matt can't handle chaos)</li>
                 </ul>
             </div>
         </section>
@@ -517,14 +517,126 @@
             </div>
         </section>
 
-        <!-- Final CTA Section -->
+        <!-- Projects Using the System -->
+        <section class="section">
+            <h2 class="text-heading">Things Matt Built Instead of Touching Grass</h2>
+            <p class="text-body" style="margin-bottom: 3rem; max-width: 700px;">Because apparently having 47 slightly different shades of purple wasn't enough, here's what happens when Matt gets obsessed with design tokens. Spoiler: it actually works.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem;">
+                
+                <!-- SIAM Application -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid var(--color-utility-border); border-radius: 1rem; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 20px 40px rgba(133, 51, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    
+                    <!-- App Preview Image Placeholder -->
+                    <div style="height: 240px; background: linear-gradient(135deg, var(--color-primary-blue-600), var(--color-accent-purple-600)); position: relative; overflow: hidden;">
+                        <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.3); display: flex; align-items: center; justify-content: center;">
+                            <div style="text-align: center;">
+                                <h3 style="color: white; font-size: 1.5rem; font-weight: 300; margin-bottom: 0.5rem;">SIAM</h3>
+                                <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin: 0;">Smart Intelligence & Analytics Meeting</p>
+                            </div>
+                        </div>
+                        <!-- Floating design elements -->
+                        <div style="position: absolute; width: 60px; height: 60px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; top: 20px; right: 30px; animation: mac-float 6s ease-in-out infinite;"></div>
+                        <div style="position: absolute; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.08); border-radius: 50%; bottom: 30px; left: 40px; animation: mac-float 8s ease-in-out infinite reverse;"></div>
+                    </div>
+                    
+                    <div style="padding: 2rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text-primary);">SIAM: Where AI Meets Matt's Typography Obsession</h3>
+                        <p style="color: var(--color-text-secondary); font-weight: 300; line-height: 1.6; margin-bottom: 1.5rem;">A meeting intelligence dashboard that's somehow both functional AND uses exactly 14 different font weights. Because why choose between utility and aesthetic perfection when you can spend 3 weeks perfecting both?</p>
+                        
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: var(--color-primary-blue-600); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Next.js</span>
+                            <span style="background: var(--color-accent-purple-600); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">TypeScript</span>
+                            <span style="background: var(--color-surface-background); color: var(--color-text-secondary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Tailwind</span>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem;">
+                            <button class="mc-button mc-button-outline" style="font-size: 0.875rem; padding: 0.5rem 1rem;">View Code</button>
+                            <button class="mc-button mc-button-outline" style="font-size: 0.875rem; padding: 0.5rem 1rem;">See Live</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Future Project Template -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid var(--color-utility-border); border-radius: 1rem; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 20px 40px rgba(51, 133, 255, 0.15)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    
+                    <!-- App Preview Image Placeholder -->
+                    <div style="height: 240px; background: linear-gradient(135deg, var(--color-accent-purple-600), var(--color-primary-blue-400)); position: relative; overflow: hidden;">
+                        <div style="position: absolute; inset: 0; background: rgba(0, 0, 0, 0.3); display: flex; align-items: center; justify-content: center;">
+                            <div style="text-align: center;">
+                                <h3 style="color: white; font-size: 1.5rem; font-weight: 300; margin-bottom: 0.5rem;">Your Project</h3>
+                                <p style="color: rgba(255, 255, 255, 0.8); font-size: 0.875rem; margin: 0;">Built with MAC Design System</p>
+                            </div>
+                        </div>
+                        <!-- Floating design elements -->
+                        <div style="position: absolute; width: 80px; height: 80px; background: rgba(255, 255, 255, 0.08); border-radius: 50%; top: 40px; left: 20px; animation: mac-float 7s ease-in-out infinite;"></div>
+                        <div style="position: absolute; width: 50px; height: 50px; background: rgba(255, 255, 255, 0.06); border-radius: 50%; bottom: 20px; right: 30px; animation: mac-float 5s ease-in-out infinite reverse;"></div>
+                    </div>
+                    
+                    <div style="padding: 2rem;">
+                        <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text-primary);">Your Turn to Overthink Everything</h3>
+                        <p style="color: var(--color-text-secondary); font-weight: 300; line-height: 1.6; margin-bottom: 1.5rem;">Matt spent an unreasonable amount of time making these design tokens pixel-perfect, so you might as well steal them. Copy what works, ignore what doesn't, and try not to spend 6 hours debating whether that purple is 2% too saturated.</p>
+                        
+                        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                            <span style="background: var(--color-surface-background); color: var(--color-text-secondary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Any Framework</span>
+                            <span style="background: var(--color-surface-background); color: var(--color-text-secondary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Design Tokens</span>
+                            <span style="background: var(--color-surface-background); color: var(--color-text-secondary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Plug & Play</span>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem;">
+                            <button class="mc-button mc-button-primary" style="font-size: 0.875rem; padding: 0.5rem 1rem;">Steal This System</button>
+                            <button class="mc-button mc-button-outline" style="font-size: 0.875rem; padding: 0.5rem 1rem;">Admire Matt's Work</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Use -->
+        <section class="section">
+            <h2 class="text-heading">How to Properly Steal Matt's Work</h2>
+            <p class="text-body" style="margin-bottom: 3rem; max-width: 700px;">Since Matt's clearly incapable of keeping design secrets, here's exactly how to copy his obsessively crafted system. You're welcome. (He's probably secretly thrilled you're interested.)</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                
+                <!-- Code Example -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid var(--color-utility-border); border-radius: 0.75rem; overflow: hidden;">
+                    <div style="background: rgba(255, 255, 255, 0.05); padding: 1rem; border-bottom: 1px solid var(--color-utility-border);">
+                        <h3 style="font-size: 1rem; font-weight: 400; margin: 0; color: var(--color-text-primary);">Matt's Unnecessarily Elegant Code</h3>
+                    </div>
+                    <div style="padding: 1.5rem;">
+                        <pre style="color: var(--color-text-secondary); font-family: SF Mono, Monaco, monospace; font-size: 0.875rem; line-height: 1.5; margin: 0; overflow-x: auto;"><span style="color: #8533ff;">import</span> { <span style="color: #3385ff;">Button</span>, <span style="color: #3385ff;">Card</span> } <span style="color: #8533ff;">from</span> <span style="color: #00cc66;">'@mac-design-system/react'</span>
+
+<span style="color: #8533ff;">function</span> <span style="color: #3385ff;">App</span>() {
+  <span style="color: #8533ff;">return</span> (
+    <span style="color: #ff6b6b;">&lt;Card</span> <span style="color: #3385ff;">variant</span>=<span style="color: #00cc66;">"elevated"</span><span style="color: #ff6b6b;">&gt;</span>
+      <span style="color: #ff6b6b;">&lt;Button</span> <span style="color: #3385ff;">variant</span>=<span style="color: #00cc66;">"primary"</span><span style="color: #ff6b6b;">&gt;</span>
+        Beautiful by Default
+      <span style="color: #ff6b6b;">&lt;/Button&gt;</span>
+    <span style="color: #ff6b6b;">&lt;/Card&gt;</span>
+  )
+}</pre>
+                    </div>
+                </div>
+                
+                <!-- Live Preview -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid var(--color-utility-border-elevated); border-radius: 0.75rem; padding: 2rem; box-shadow: 0 8px 24px var(--color-utility-shadow);">
+                    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--color-utility-border); border-radius: 0.5rem; padding: 2rem; text-align: center;">
+                        <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text-primary);">The Inevitable Result</h3>
+                        <p style="color: var(--color-text-secondary); margin-bottom: 1.5rem; font-size: 0.875rem;">Look how effortlessly sexy this button is. Matt spent 2 hours on that hover animation.</p>
+                        <button class="mc-button mc-button-primary">Beautiful by Default</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Section -->
         <section class="section" style="text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, rgba(51, 133, 255, 0.1), rgba(133, 51, 255, 0.1)); border-radius: 1rem; border: 1px solid rgba(133, 51, 255, 0.2);">
-            <h2 class="text-heading" style="margin-bottom: 1rem;">Ready to Build Something Beautiful?</h2>
-            <p class="text-body" style="margin-bottom: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">The MAC Design System by Matthew Adam Carpenter provides everything you need to create consistent, professional interfaces across all your projects.</p>
-            <p class="text-body" style="margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; font-size: 0.875rem; color: var(--color-text-muted);">Built with passion for beautiful design and technical excellence.</p>
+            <h2 class="text-heading" style="margin-bottom: 1rem;">Ready to Out-Design Matt?</h2>
+            <p class="text-body" style="margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">This design system is Matt's love letter to pixel perfection and typographic obsession. Use it to build something that makes him jealous he didn't think of it first.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <button class="mc-button mc-button-primary" style="font-size: 1rem; padding: 1rem 2rem;">Start Building</button>
-                <button class="mc-button mc-button-outline" style="font-size: 1rem; padding: 1rem 2rem;">View Documentation</button>
+                <button class="mc-button mc-button-primary" style="font-size: 1rem; padding: 1rem 2rem;">Challenge Accepted</button>
+                <button class="mc-button mc-button-outline" style="font-size: 1rem; padding: 1rem 2rem;">Just Here to Admire</button>
             </div>
         </section>
     </div>
