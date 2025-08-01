@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC Design System - Style Guide</title>
+    <style>
+        /* Import all design tokens */
+        :root {
+            /* Primary Blues */
+            --color-primary-blue-400: #3385ff;
+            --color-primary-blue-600: #0052cc;
+            
+            /* Accent Purples */
+            --color-accent-purple-400: #8533ff;
+            --color-accent-purple-600: #5200cc;
+            
+            /* Surface Colors */
+            --color-surface-background: #0a0a0a;
+            --color-surface-elevated: #141414;
+            
+            /* Text Colors */
+            --color-text-primary: #ffffff;
+            --color-text-secondary: #b3b3b3;
+            --color-text-muted: #666666;
+            
+            /* Utility Colors */
+            --color-utility-border: rgba(255, 255, 255, 0.1);
+            --color-utility-border-elevated: rgba(255, 255, 255, 0.2);
+            --color-utility-shadow: rgba(0, 0, 0, 0.5);
+            
+            /* State Colors */
+            --color-state-hover: rgba(255, 255, 255, 0.05);
+            --color-state-focus: #3385ff;
+            --color-state-disabled: #333333;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--color-surface-background);
+            color: var(--color-text-primary);
+            font-weight: 300;
+            line-height: 1.5;
+            margin: 0;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Typography Styles */
+        .text-display {
+            font-size: 3.75rem;
+            font-weight: 100;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+        }
+
+        .text-heading {
+            font-size: 2.25rem;
+            font-weight: 200;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .text-title {
+            font-size: 1.5rem;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+
+        .text-body {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.75;
+            color: var(--color-text-secondary);
+        }
+
+        /* Section Spacing */
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }        /* Color Swatches */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .color-group h3 {
+            font-size: 1.25rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: var(--color-text-secondary);
+        }
+
+        .color-swatch {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .color-box {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 0.5rem;
+            margin-right: 1rem;
+            border: 1px solid var(--color-utility-border);
+        }
+
+        .color-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .color-name {
+            font-weight: 400;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-value {
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            font-family: SF Mono, Monaco, monospace;
+        }
+
+        /* Button Styles */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 400;
+            font-size: 0.875rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .button-primary {
+            background-color: var(--color-accent-purple-600);
+            color: var(--color-text-primary);
+        }
+
+        .button-primary:hover {
+            background-color: var(--color-accent-purple-400);
+        }
+
+        .button-secondary {
+            background-color: var(--color-surface-elevated);
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-utility-border-elevated);
+        }
+
+        .button-secondary:hover {
+            background-color: var(--color-state-hover);
+        }
+
+        .button-outline {
+            background-color: transparent;
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-utility-border-elevated);
+        }
+
+        .button-outline:hover {
+            background-color: var(--color-state-hover);
+        }
+
+        /* Card Styles */
+        .card {
+            background-color: var(--color-surface-elevated);
+            border: 1px solid var(--color-utility-border);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-elevated {
+            background-color: var(--color-surface-elevated);
+            border: 1px solid var(--color-utility-border-elevated);
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 8px 24px var(--color-utility-shadow);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 300;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            color: var(--color-text-secondary);
+            font-weight: 300;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="section">
+            <h1 class="text-display">MC Design System</h1>
+            <p class="text-body">A professional dark design system with blue and purple accents</p>
+        </header>
+
+        <!-- Colors Section -->
+        <section class="section">
+            <h2 class="text-heading">Colors</h2>
+            
+            <div class="color-grid">
+                <!-- Primary Blues -->
+                <div class="color-group">
+                    <h3>Primary Blues</h3>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: #3385ff;"></div>
+                        <div class="color-info">
+                            <span class="color-name">Blue 400</span>
+                            <span class="color-value">#3385ff</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: #0052cc;"></div>
+                        <div class="color-info">
+                            <span class="color-name">Blue 600</span>
+                            <span class="color-value">#0052cc</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accent Purples -->
+                <div class="color-group">
+                    <h3>Accent Purples</h3>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: #8533ff;"></div>
+                        <div class="color-info">
+                            <span class="color-name">Purple 400</span>
+                            <span class="color-value">#8533ff</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: #5200cc;"></div>
+                        <div class="color-info">
+                            <span class="color-name">Purple 600</span>
+                            <span class="color-value">#5200cc</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Surface Colors -->
+                <div class="color-group">
+                    <h3>Surface Colors</h3>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: #0a0a0a; border: 1px solid #333;"></div>
+                        <div class="color-info">
+                            <span class="color-name">Background</span>
+                            <span class="color-value">#0a0a0a</span>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-box" style="background-color: #141414;"></div>
+                        <div class="color-info">
+                            <span class="color-name">Surface</span>
+                            <span class="color-value">#141414</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Typography Section -->
+        <section class="section">
+            <h2 class="text-heading">Typography</h2>
+            
+            <div style="margin-bottom: 3rem;">
+                <h1 class="text-display">Thin Display Text</h1>
+                <p class="text-body">6xl / Thin (100)</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <h2 class="text-heading">Extra Light Heading</h2>
+                <p class="text-body">4xl / Extra Light (200)</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <h3 class="text-title">Light Title</h3>
+                <p class="text-body">2xl / Light (300)</p>
+            </div>
+            
+            <div style="margin-bottom: 2rem;">
+                <p class="text-body">Body text in light weight for readability</p>
+                <p class="text-body">lg / Light (300)</p>
+            </div>
+        </section>
+
+        <!-- Components Section -->
+        <section class="section">
+            <h2 class="text-heading">Components</h2>
+            
+            <!-- Buttons -->
+            <div style="margin-bottom: 3rem;">
+                <h3 class="text-title">Buttons</h3>
+                <div>
+                    <button class="button button-primary">Primary Button</button>
+                    <button class="button button-secondary">Secondary Button</button>
+                    <button class="button button-outline">Outline Button</button>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div style="margin-bottom: 3rem;">
+                <h3 class="text-title">Cards</h3>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3>Standard Card</h3>
+                        <p>This is a standard card component with subtle borders and surface coloring.</p>
+                    </div>
+                    <div class="card-elevated">
+                        <h3>Elevated Card</h3>
+                        <p>This card has elevation with shadow for more visual hierarchy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Principles -->
+        <section class="section">
+            <h2 class="text-heading">Design Principles</h2>
+            <div class="card">
+                <h3>Core Guidelines</h3>
+                <ul style="color: var(--color-text-secondary); font-weight: 300; line-height: 1.75;">
+                    <li><strong>No Linear Gradients:</strong> Clean, solid colors throughout</li>
+                    <li><strong>Typography:</strong> Thin, light font weights (100-300) for elegance</li>
+                    <li><strong>Colors:</strong> Dark theme with blue and purple accents</li>
+                    <li><strong>Professional:</strong> Clean, modern, minimalist aesthetic</li>
+                    <li><strong>Consistency:</strong> Single source of truth for all design decisions</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

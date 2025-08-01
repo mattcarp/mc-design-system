@@ -1,0 +1,24 @@
+{
+  "name": "mc-design-system",
+  "version": "1.0.0",
+  "description": "A professional dark design system with blue and purple accents",
+  "type": "module",
+  "main": "tokens/index.js",
+  "scripts": {
+    "serve": "python3 -m http.server 8080",
+    "showcase": "open showcase/index.html"
+  },
+  "keywords": [
+    "design-system",
+    "ui",
+    "design-tokens",
+    "dark-theme",
+    "professional"
+  ],
+  "author": "Matt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/mc-design-system.git"
+  }
+}
