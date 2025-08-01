@@ -211,6 +211,144 @@
             color: var(--color-text-secondary);
             font-weight: 300;
         }
+
+        /* Enhanced Button Styles */
+        .mc-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-family: system-ui, -apple-system, sans-serif;
+            font-weight: 400;
+            font-size: 0.875rem;
+            line-height: 1.2;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            text-decoration: none;
+            user-select: none;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .mc-button-primary {
+            background-color: var(--color-accent-purple-600);
+            color: var(--color-text-primary);
+        }
+
+        .mc-button-primary:hover {
+            background-color: var(--color-accent-purple-400);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(82, 0, 204, 0.3);
+        }
+
+        .mc-button-secondary {
+            background-color: var(--color-surface-elevated);
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-utility-border-elevated);
+        }
+
+        .mc-button-secondary:hover {
+            background-color: var(--color-state-hover);
+            border-color: var(--color-primary-blue-400);
+            transform: translateY(-1px);
+        }
+
+        .mc-button-outline {
+            background-color: transparent;
+            color: var(--color-text-primary);
+            border: 1px solid var(--color-utility-border-elevated);
+        }
+
+        .mc-button-outline:hover {
+            background-color: var(--color-state-hover);
+            border-color: var(--color-primary-blue-400);
+        }
+
+        .mc-button-ghost {
+            background-color: transparent;
+            color: var(--color-text-secondary);
+            border: none;
+            padding: 0.5rem 1rem;
+        }
+
+        .mc-button-ghost:hover {
+            background-color: var(--color-state-hover);
+            color: var(--color-text-primary);
+        }
+
+        /* Form Styles */
+        .mc-input {
+            display: block;
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background-color: var(--color-surface-elevated);
+            border: 1px solid var(--color-utility-border);
+            border-radius: 0.5rem;
+            color: var(--color-text-primary);
+            font-family: system-ui, -apple-system, sans-serif;
+            font-weight: 300;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .mc-input::placeholder {
+            color: var(--color-text-muted);
+        }
+
+        .mc-input:focus {
+            outline: none;
+            border-color: var(--color-primary-blue-400);
+            box-shadow: 0 0 0 3px rgba(51, 133, 255, 0.1);
+        }
+
+        .mc-toggle {
+            position: relative;
+            display: inline-block;
+            width: 3rem;
+            height: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .mc-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .mc-toggle-slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--color-state-disabled);
+            transition: 0.2s;
+            border-radius: 1.5rem;
+        }
+
+        .mc-toggle-slider:before {
+            position: absolute;
+            content: "";
+            height: 1.125rem;
+            width: 1.125rem;
+            left: 0.1875rem;
+            bottom: 0.1875rem;
+            background-color: white;
+            transition: 0.2s;
+            border-radius: 50%;
+        }
+
+        .mc-toggle input:checked + .mc-toggle-slider {
+            background-color: var(--color-accent-purple-600);
+        }
+
+        .mc-toggle input:checked + .mc-toggle-slider:before {
+            transform: translateX(1.5rem);
+        }
     </style>
 </head>
 <body>
@@ -317,9 +455,48 @@
             <div style="margin-bottom: 3rem;">
                 <h3 class="text-title">Buttons</h3>
                 <div>
-                    <button class="button button-primary">Primary Button</button>
-                    <button class="button button-secondary">Secondary Button</button>
-                    <button class="button button-outline">Outline Button</button>
+                    <button class="mc-button mc-button-primary">Primary Button</button>
+                    <button class="mc-button mc-button-secondary">Secondary Button</button>
+                    <button class="mc-button mc-button-outline">Outline Button</button>
+                    <button class="mc-button mc-button-ghost">Ghost Button</button>
+                </div>
+            </div>
+
+            <!-- Form Elements -->
+            <div style="margin-bottom: 3rem;">
+                <h3 class="text-title">Form Elements</h3>
+                <div style="max-width: 400px;">
+                    <input type="text" class="mc-input" placeholder="Enter your name">
+                    <input type="email" class="mc-input" placeholder="Enter your email">
+                    <input type="password" class="mc-input" placeholder="Enter password">
+                </div>
+            </div>
+
+            <!-- Toggle Switches -->
+            <div style="margin-bottom: 3rem;">
+                <h3 class="text-title">Toggle Switches</h3>
+                <div style="display: flex; align-items: center; gap: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <label class="mc-toggle">
+                            <input type="checkbox">
+                            <span class="mc-toggle-slider"></span>
+                        </label>
+                        <span style="color: var(--color-text-secondary); font-size: 0.875rem;">Enable notifications</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <label class="mc-toggle">
+                            <input type="checkbox" checked>
+                            <span class="mc-toggle-slider"></span>
+                        </label>
+                        <span style="color: var(--color-text-secondary); font-size: 0.875rem;">Dark mode</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <label class="mc-toggle">
+                            <input type="checkbox">
+                            <span class="mc-toggle-slider"></span>
+                        </label>
+                        <span style="color: var(--color-text-secondary); font-size: 0.875rem;">Auto-save</span>
+                    </div>
                 </div>
             </div>
 
