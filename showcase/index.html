@@ -205,8 +205,8 @@
     <div class="container">
         <!-- Header with Glow Effect -->
         <header class="section">
-            <h1 class="text-display glow-text">MC Design System</h1>
-            <p class="text-body">A professional dark design system with blue and purple accents</p>
+            <h1 class="text-display glow-text">MAC Design System</h1>
+            <p class="text-body">A professional dark design system by Matthew Adam Carpenter</p>
         </header>
 
         <!-- Colors Section -->
@@ -325,6 +325,206 @@
                     <li><strong>Professional:</strong> Clean, modern, minimalist aesthetic</li>
                     <li><strong>Consistency:</strong> Single source of truth for all design decisions</li>
                 </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
+        <!-- Hero Demo Section with Gradient Border -->
+        <section class="section">
+            <div style="position: relative; background: var(--color-surface-elevated); border-radius: 1rem; padding: 3rem; overflow: hidden; border: 2px solid transparent; background-clip: padding-box;">
+                <div style="position: absolute; inset: 0; padding: 2px; background: linear-gradient(45deg, var(--color-primary-blue-400), var(--color-accent-purple-400), var(--color-primary-blue-400)); border-radius: inherit; mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: xor; animation: gradientRotate 3s linear infinite;"></div>
+                
+                <h2 class="text-heading" style="margin-bottom: 1rem; position: relative; z-index: 1;">Live Component Showcase</h2>
+                <p class="text-body" style="margin-bottom: 2rem; position: relative; z-index: 1;">Interactive examples of every design token and component in action</p>
+                
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; position: relative; z-index: 1;">
+                    <button class="mc-button mc-button-primary">Get Started</button>
+                    <button class="mc-button mc-button-secondary">Learn More</button>
+                    <button class="mc-button mc-button-outline">Documentation</button>
+                </div>
+            </div>
+        </section>
+
+        @keyframes gradientRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        <!-- Interactive Form Showcase -->
+        <section class="section">
+            <h2 class="text-heading">Form Elements</h2>
+            
+            <div style="background: rgba(20, 20, 20, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 3rem; position: relative; overflow: hidden;">
+                <!-- Top shine line -->
+                <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);"></div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start;">
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 2rem; color: var(--color-text-primary);">Text Inputs</h3>
+                        <input type="text" placeholder="Your name" value="Matthew Adam Carpenter" style="display: block; width: 100%; padding: 0.75rem 1rem; background-color: var(--color-surface-elevated); border: 1px solid var(--color-utility-border); border-radius: 0.5rem; color: var(--color-text-primary); font-family: system-ui, -apple-system, sans-serif; font-weight: 300; font-size: 0.875rem; margin-bottom: 1rem; transition: all 0.2s ease;">
+                        <input type="email" placeholder="Email address" value="mac@macdesignsystem.com" style="display: block; width: 100%; padding: 0.75rem 1rem; background-color: var(--color-surface-elevated); border: 1px solid var(--color-utility-border); border-radius: 0.5rem; color: var(--color-text-primary); font-family: system-ui, -apple-system, sans-serif; font-weight: 300; font-size: 0.875rem; margin-bottom: 1rem; transition: all 0.2s ease;">
+                        <textarea placeholder="Message" style="display: block; width: 100%; min-height: 6rem; padding: 0.75rem 1rem; background-color: var(--color-surface-elevated); border: 1px solid var(--color-utility-border); border-radius: 0.5rem; color: var(--color-text-primary); font-family: system-ui, -apple-system, sans-serif; font-weight: 300; font-size: 0.875rem; resize: vertical; transition: all 0.2s ease;">Love the MAC Design System! The attention to detail and professional aesthetic perfectly represents Matt Carpenter's design expertise.</textarea>
+                    </div>
+                    
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 2rem; color: var(--color-text-primary);">Toggle Controls</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <label style="position: relative; display: inline-block; width: 3rem; height: 1.5rem;">
+                                    <input type="checkbox" checked style="opacity: 0; width: 0; height: 0;">
+                                    <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--color-accent-purple-600); transition: 0.2s; border-radius: 1.5rem; box-shadow: 0 2px 8px rgba(133, 51, 255, 0.3);"></span>
+                                    <span style="position: absolute; content: ''; height: 1.125rem; width: 1.125rem; left: 0.1875rem; bottom: 0.1875rem; background-color: white; transition: 0.2s; border-radius: 50%; transform: translateX(1.5rem);"></span>
+                                </label>
+                                <span style="color: var(--color-text-secondary); font-size: 0.875rem;">Dark mode (Active)</span>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <label style="position: relative; display: inline-block; width: 3rem; height: 1.5rem;">
+                                    <input type="checkbox" style="opacity: 0; width: 0; height: 0;">
+                                    <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--color-state-disabled); transition: 0.2s; border-radius: 1.5rem;"></span>
+                                    <span style="position: absolute; content: ''; height: 1.125rem; width: 1.125rem; left: 0.1875rem; bottom: 0.1875rem; background-color: white; transition: 0.2s; border-radius: 50%;"></span>
+                                </label>
+                                <span style="color: var(--color-text-secondary); font-size: 0.875rem;">Notifications</span>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <label style="position: relative; display: inline-block; width: 3rem; height: 1.5rem;">
+                                    <input type="checkbox" style="opacity: 0; width: 0; height: 0;">
+                                    <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: var(--color-state-disabled); transition: 0.2s; border-radius: 1.5rem;"></span>
+                                    <span style="position: absolute; content: ''; height: 1.125rem; width: 1.125rem; left: 0.1875rem; bottom: 0.1875rem; background-color: white; transition: 0.2s; border-radius: 50%;"></span>
+                                </label>
+                                <span style="color: var(--color-text-secondary); font-size: 0.875rem;">Auto-save</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Card Showcase with Hover Effects -->
+        <section class="section">
+            <h2 class="text-heading">Card Variants</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Standard Card with Shimmer -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid var(--color-utility-border); border-radius: 0.75rem; padding: 2rem; position: relative; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(133, 51, 255, 0.2)'; this.style.borderColor='var(--color-accent-purple-400)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none'; this.style.borderColor='var(--color-utility-border)';">
+                    <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent); animation: shimmer 3s infinite;"></div>
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--color-primary-blue-400), var(--color-accent-purple-400)); border-radius: 0.75rem 0.75rem 0 0; transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;"></div>
+                    
+                    <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text-primary);">Standard Card</h3>
+                    <p style="color: var(--color-text-secondary); font-weight: 300; line-height: 1.6; margin-bottom: 1.5rem;">Subtle borders and surface coloring with shimmer animation. Hover for interactive effects.</p>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <span style="background: var(--color-primary-blue-600); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Interactive</span>
+                        <span style="background: var(--color-surface-background); color: var(--color-text-secondary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Animated</span>
+                    </div>
+                </div>
+
+                <!-- Elevated Card -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid var(--color-utility-border-elevated); border-radius: 0.75rem; padding: 2rem; box-shadow: 0 8px 24px var(--color-utility-shadow); position: relative; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(51, 133, 255, 0.3)'; this.style.borderColor='var(--color-primary-blue-400)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 24px var(--color-utility-shadow)'; this.style.borderColor='var(--color-utility-border-elevated)';">
+                    <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent); animation: shimmer 4s infinite;"></div>
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--color-primary-blue-400), var(--color-accent-purple-400)); border-radius: 0.75rem 0.75rem 0 0; transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;"></div>
+                    
+                    <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text-primary);">Elevated Card</h3>
+                    <p style="color: var(--color-text-secondary); font-weight: 300; line-height: 1.6; margin-bottom: 1.5rem;">Enhanced shadows and borders for visual hierarchy. Perfect for important content.</p>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <span style="background: var(--color-accent-purple-600); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Premium</span>
+                        <span style="background: var(--color-surface-background); color: var(--color-text-secondary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Elevated</span>
+                    </div>
+                </div>
+
+                <!-- Glass Morphism Card -->
+                <div style="background: rgba(20, 20, 20, 0.7); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 1rem; padding: 2rem; position: relative; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;" onmouseover="this.style.transform='translateY(-8px) scale(1.02)'; this.style.boxShadow='0 20px 40px rgba(133, 51, 255, 0.2)'; this.style.borderColor='rgba(133, 51, 255, 0.3)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='none'; this.style.borderColor='rgba(255, 255, 255, 0.1)';">
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);"></div>
+                    <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--color-primary-blue-400), var(--color-accent-purple-400)); border-radius: 1rem 1rem 0 0; transform: scaleX(0); transition: transform 0.3s ease; transform-origin: left;"></div>
+                    
+                    <h3 style="font-size: 1.25rem; font-weight: 300; margin-bottom: 1rem; color: var(--color-text-primary);">Glass Morphism</h3>
+                    <p style="color: var(--color-text-secondary); font-weight: 300; line-height: 1.6; margin-bottom: 1.5rem;">Modern frosted glass effect with backdrop blur. Cutting-edge aesthetic.</p>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <span style="background: linear-gradient(45deg, var(--color-primary-blue-400), var(--color-accent-purple-400)); color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Modern</span>
+                        <span style="background: rgba(255, 255, 255, 0.1); color: var(--color-text-secondary); padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 400;">Glass</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        <!-- Status and Feedback Elements -->
+        <section class="section">
+            <h2 class="text-heading">Status & Feedback</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <!-- Success State -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid rgba(0, 204, 102, 0.3); border-radius: 0.75rem; padding: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background: rgba(0, 204, 102, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <span style="color: #00cc66; font-size: 1.25rem;">✓</span>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1rem; font-weight: 400; margin: 0; color: #00cc66;">Success</h3>
+                            <p style="font-size: 0.875rem; color: var(--color-text-secondary); margin: 0;">Design system deployed</p>
+                        </div>
+                    </div>
+                    <button class="mc-button mc-button-outline" style="border-color: rgba(0, 204, 102, 0.3); color: #00cc66;">View Details</button>
+                </div>
+
+                <!-- Warning State -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid rgba(255, 193, 7, 0.3); border-radius: 0.75rem; padding: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background: rgba(255, 193, 7, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <span style="color: #ffc107; font-size: 1.25rem;">⚠</span>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1rem; font-weight: 400; margin: 0; color: #ffc107;">Warning</h3>
+                            <p style="font-size: 0.875rem; color: var(--color-text-secondary); margin: 0;">Update available</p>
+                        </div>
+                    </div>
+                    <button class="mc-button mc-button-outline" style="border-color: rgba(255, 193, 7, 0.3); color: #ffc107;">Update Now</button>
+                </div>
+
+                <!-- Error State -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid rgba(255, 68, 68, 0.3); border-radius: 0.75rem; padding: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background: rgba(255, 68, 68, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <span style="color: #ff4444; font-size: 1.25rem;">✕</span>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1rem; font-weight: 400; margin: 0; color: #ff4444;">Error</h3>
+                            <p style="font-size: 0.875rem; color: var(--color-text-secondary); margin: 0;">Connection failed</p>
+                        </div>
+                    </div>
+                    <button class="mc-button mc-button-outline" style="border-color: rgba(255, 68, 68, 0.3); color: #ff4444;">Retry</button>
+                </div>
+
+                <!-- Info State -->
+                <div style="background: var(--color-surface-elevated); border: 1px solid var(--color-primary-blue-400); border-radius: 0.75rem; padding: 2rem;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="width: 3rem; height: 3rem; background: rgba(51, 133, 255, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                            <span style="color: var(--color-primary-blue-400); font-size: 1.25rem;">i</span>
+                        </div>
+                        <div>
+                            <h3 style="font-size: 1rem; font-weight: 400; margin: 0; color: var(--color-primary-blue-400);">Info</h3>
+                            <p style="font-size: 0.875rem; color: var(--color-text-secondary); margin: 0;">New features added</p>
+                        </div>
+                    </div>
+                    <button class="mc-button mc-button-outline" style="border-color: var(--color-primary-blue-400); color: var(--color-primary-blue-400);">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="section" style="text-align: center; padding: 4rem 2rem; background: linear-gradient(135deg, rgba(51, 133, 255, 0.1), rgba(133, 51, 255, 0.1)); border-radius: 1rem; border: 1px solid rgba(133, 51, 255, 0.2);">
+            <h2 class="text-heading" style="margin-bottom: 1rem;">Ready to Build Something Beautiful?</h2>
+            <p class="text-body" style="margin-bottom: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">The MAC Design System by Matthew Adam Carpenter provides everything you need to create consistent, professional interfaces across all your projects.</p>
+            <p class="text-body" style="margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; font-size: 0.875rem; color: var(--color-text-muted);">Built with passion for beautiful design and technical excellence.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <button class="mc-button mc-button-primary" style="font-size: 1rem; padding: 1rem 2rem;">Start Building</button>
+                <button class="mc-button mc-button-outline" style="font-size: 1rem; padding: 1rem 2rem;">View Documentation</button>
             </div>
         </section>
     </div>

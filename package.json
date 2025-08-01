@@ -1,24 +1,26 @@
 {
-  "name": "mc-design-system",
+  "name": "mac-design-system",
   "version": "1.0.0",
-  "description": "A professional dark design system with blue and purple accents",
+  "description": "A professional dark design system by Matthew Adam Carpenter",
   "type": "module",
   "main": "tokens/index.js",
   "scripts": {
     "serve": "python3 -m http.server 8080",
-    "showcase": "open showcase/index.html"
+    "showcase": "open showcase/index.html",
+    "screenshots": "node screenshot-capture.js"
   },
   "keywords": [
     "design-system",
     "ui",
     "design-tokens",
     "dark-theme",
-    "professional"
+    "professional",
+    "mac-design"
   ],
-  "author": "Matt",
+  "author": "Matthew Adam Carpenter <mac@macdesignsystem.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yourusername/mc-design-system.git"
+    "url": "git+https://github.com/mattcarp/mc-design-system.git"
   }
 }

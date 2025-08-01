@@ -1,4 +1,6 @@
-# MC Design System
+# MAC Design System
+
+**By Matthew Adam Carpenter**
 
 A professional dark design system with blue and purple accents. Clean, modern, and built to last across projects and years of development.
 
@@ -9,6 +11,8 @@ A professional dark design system with blue and purple accents. Clean, modern, a
 - **Dark First**: Professional dark theme with strategic light accents
 - **Minimalist**: Maximum information density with minimal visual clutter
 - **Consistent**: Single source of truth for all design decisions
+
+*Crafted with passion by Matt Carpenter for beautiful, functional user experiences.*
 
 ## Structure
 
